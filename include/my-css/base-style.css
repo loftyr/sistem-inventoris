@@ -1,0 +1,165 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  height: auto;
+  min-height: 100%;
+  margin: 0;
+  display: block;
+}
+
+li { 
+  display: list-item;
+}
+
+.main-header {
+  margin-left: 250px;
+  z-index: 100;
+  background-color: white;
+}
+
+.layout-fixed.main-header {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+}
+
+.main-sidebar {
+  height: 100vh;
+  overflow-y: hidden;
+  width: 250px;
+  background-color: #343a40;
+}
+
+.layout-fixed.main-sidebar {
+  position: fixed;
+  float: none;
+  bottom: 0;
+  left: 0;
+  top: 0;
+}
+
+.brand-link {
+  display: block;
+  padding: 13px 10px;
+  font-size: 1.25rem;
+  line-height: 1.5;
+  transition: width 0.3s ease-in-out;
+  border-bottom: solid 1px white;
+}
+
+.user-panel {
+  border-bottom: solid 1px white;
+  padding: 0 10px;
+}
+
+.brand-image {
+  margin-top: -3px;
+}
+
+.sidebar {
+  height: 100vh;
+  padding: 0 8px;
+  overflow-x: auto;
+  z-index: 100;
+}
+
+.sidebar a {
+  color: white;
+}
+
+.flex-column {
+  -ms-flex-direction: column !important;
+  flex-direction: column !important;
+}
+
+/* .nav-sidebar > .nav-item .nav-icon {
+  font-size: 1.2rem;
+  margin-right: .2rem;
+  text-align: center;
+  width: 1.6rem;
+} */
+
+.nav-sidebar .nav-link p {
+  display: inline-block;
+  margin: 0;
+}
+
+.nav-treeview > .nav-item {
+  width: 100%;
+}
+
+.nav-treeview > .nav-item > .nav-link.active {
+  background-color: rgba(255,255,255,.9);
+  color: #343a40;
+}
+
+.nav-link > p > .right {
+  position: absolute;
+  right: 1rem;
+  top: .7rem;
+}
+
+.nav-treeview {
+  position: relative;
+  display: none;
+  max-height: 0;
+  transition: 2s;
+  background-color: rgba(82, 82, 82, 0.4);
+}
+
+.has-treeview.menu-open > .nav-treeview {
+  max-height: max-content;
+  display: block;
+  transition: 2s;
+}
+
+.nav-item {
+  position: relative;
+  margin: 5px 0px;
+}
+
+.nav-link:first-child {
+  margin-top: 0 !important;
+}
+
+.nav-link:last-child {
+  margin-bottom: 0 !important;
+}
+
+
+.nav-item:hover > a {
+  background-color: rgba(255,255,255,.4);
+}
+
+/* Style Srollbar */
+.sidebar::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	border-radius: 6px;
+	background-color: transparent;
+}
+ 
+.sidebar::-webkit-scrollbar {
+  width: 8px;
+	background-color: transparent;
+}
+ 
+.sidebar::-webkit-scrollbar-thumb {
+  border-radius: 6px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: #555;
+}
+
+
+.content-wrapper {
+  position: absolute;
+  top: 60px;
+  left: 250px;
+  right: 0;
+  min-height: 120vh;
+  background-color: #e9ecef;
+}
